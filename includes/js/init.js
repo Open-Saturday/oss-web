@@ -36,7 +36,7 @@ $(document).ready(function () {
                 'day': 3,
                 'month': 9,
                 'year': 2022,
-                'hour': 0,
+                'hour': 12,
                 'min': 0,
                 'sec': 0
             },
