@@ -33,10 +33,10 @@ $(document).ready(function () {
     if (jQuery.isFunction(jQuery.fn.countDown)) {
         $('#qcEventCountDown').countDown({
             targetDate: {
-                'day': 28,
+                'day': 3,
                 'month': 9,
-                'year': 2019,
-                'hour': 8,
+                'year': 2022,
+                'hour': 0,
                 'min': 0,
                 'sec': 0
             },
