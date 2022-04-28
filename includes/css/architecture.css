@@ -124,6 +124,9 @@ img::selection,img::-moz-selection {
 .col-logo {
 	width: 25%;
 }
+.col-vr-speaker {
+	width: 50%;
+}
 .col-7 {
 	width: 58.333333333333336%;
 }
