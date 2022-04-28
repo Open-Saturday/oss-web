@@ -242,7 +242,88 @@ video#bgvid {
     }
 }
 
+/* Speacker container */
 
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+/* Sections Header
+--------------------------------*/
+.section-header {
+    margin-bottom: 60px;
+    position: relative;
+    padding-bottom: 20px;
+  }
+  .section-header::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 5px;
+    background: #f82249;
+    bottom: 0;
+    left: calc(50% - 25px);
+  }
+  .section-header h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .section-header p {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #9195a2;
+  }
+  
+  .section-with-bg {
+    background-color: #f6f7fd;
+  }
+
+  /* speacker from bootstrap */
+
+  .col-lg-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+
+  .col-md-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .row-vr {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  .row-vr > * {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-top: var(--bs-gutter-y);
+    width: 25%;
+  }
+
+  
 
 /* ----------------------------------------------------------------*/
 /* 	3. NAVIGATION  */
@@ -256,6 +337,7 @@ video#bgvid {
     width: 50%;
     list-style: none;
     overflow: hidden;
+    inline-size: 14.28%;
 }
 #qcPriNav li a, #qcPriNav li.current a:hover {
     display: block;
@@ -263,7 +345,6 @@ video#bgvid {
     font: 600 17px/100px "Open sans", Helvetica, sans-serif;
     letter-spacing: 1px;
     text-align: center;
-    text-transform: uppercase;
     transition: all .25s linear;
     -o-transition: all .25s linear;
     -moz-transition: all .25s linear;
@@ -273,7 +354,10 @@ video#bgvid {
     background: #27AAE1;
 }
 #qcPriNav li:last-child a {
-    background: rgb(43, 187, 248);
+    background: #f82249;
+}
+#qcPriNav li a {
+    background: rgb(73, 181, 228);
 }
 #qcPriNav li a i, #qcPriNav li.current a:hover i {
     position: absolute;
@@ -297,7 +381,7 @@ video#bgvid {
 #qcPriNav li.current {
     overflow: visible;
 }
-#qcPriNav li.current:after {
+/* #qcPriNav li.current:after {
     content: "";
     position: absolute;
     left: 50%;
@@ -306,7 +390,7 @@ video#bgvid {
     border-left: 18px solid transparent;
     border-right: 18px solid transparent;
     border-top: 18px solid #1DB6AD;
-}
+} */
 #qcPriNav li.current:last-child:after {
     border-top: 18px solid #42D0C7;
 }
@@ -373,6 +457,14 @@ video#bgvid {
     color: #FF4E00;
 }
 
+#qcPriNav li.rojo a {
+    background: #FF4E00;
+}
+
+#qcPriNav li.green a {
+    background: #2fa72b;
+}
+
 
 
 /* ----------------------------------------------------------------*/
@@ -387,6 +479,8 @@ video#bgvid {
     left: 0;
     width: 100%;
     z-index: 10;
+    border-top: 1px #aaa solid;
+    border-bottom: 1px #555 solid;
 }
 #qcHomeHeader .col, #qcHeader .col {
     position: relative;
@@ -407,6 +501,9 @@ video#bgvid {
     text-align: center;
 }
 
+#qcPriNav li.active a {
+    background: rgb(9, 137, 197);
+}
 
 /* === 4.3 CONTENT WRAPPERS === */
 
@@ -519,7 +616,7 @@ video#bgvid {
     color: #888;
     font: 400 11px/24px "Open sans", Helvetica, sans-serif;
     letter-spacing: 1px;
-    text-transform: uppercase;
+
 }
 #qcFooterPara p span {
     display: block;
@@ -1174,10 +1271,102 @@ ul.qcAddress li a {
 }
 
 
+/*--------------------------------------------------------------
+# Speakers Section
+--------------------------------------------------------------*/
+#speakers {
+    padding: 60px 0 30px 0;
+  }
+  #speakers .speaker {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+  #speakers .speaker .details {
+    background: rgba(6, 12, 34, 0.76);
+    position: absolute;
+    left: 0;
+    bottom: -40px;
+    right: 0;
+    text-align: center;
+    padding-top: 10px;
+    transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  #speakers .speaker .details h3 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  #speakers .speaker .details p {
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+  #speakers .speaker .details .social {
+    height: 40px;
+  }
+  #speakers .speaker .details .social i {
+    line-height: 0;
+    margin: 0 2px;
+  }
+  #speakers .speaker .details a {
+    color: #fff;
+  }
+  #speakers .speaker .details a:hover {
+    color: #f82249;
+  }
+  #speakers .speaker:hover .details {
+    bottom: 0;
+  }
+  
+  #speakers-details {
+    padding: 60px 0;
+  }
+  #speakers-details .details h2 {
+    color: #112363;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  #speakers-details .details .social {
+    margin-bottom: 15px;
+  }
+  #speakers-details .details .social a {
+    background: #e9edfb;
+    color: #112363;
+    line-height: 1;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #speakers-details .details .social a:hover {
+    background: #f82249;
+    color: #fff;
+  }
+  #speakers-details .details .social a i {
+    font-size: 16px;
+    line-height: 0;
+  }
+  #speakers-details .details p {
+    color: #112363;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
 
 /* ----------------------------------------------------------------*/
 /* 	6. MISCELLANEOUS  */
 /* ----------------------------------------------------------------*/
+div#qcFooterPara {
+    text-align: center;
+}
+
 
 #qcContent .row > .col .box.no-border {
     border: 0;
@@ -1195,7 +1384,7 @@ ul.qcAddress li a {
     border-bottom: 1px #ccc solid;
 }
 .qcTabTitle h4 {
-    color: #FF4E00;
+    color: #000000;
     font: 100 70px/70px "Raleway", Helvetica, Arial, sans-serif;
     letter-spacing: -2px;
 }
