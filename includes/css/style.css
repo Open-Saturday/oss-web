@@ -337,7 +337,7 @@ video#bgvid {
     width: 50%;
     list-style: none;
     overflow: hidden;
-    inline-size: 20%;
+    inline-size: 14.28%;
 }
 #qcPriNav li a, #qcPriNav li.current a:hover {
     display: block;
@@ -455,6 +455,14 @@ video#bgvid {
 }
 #qcTabNav li.active a i {
     color: #FF4E00;
+}
+
+#qcPriNav li.rojo a {
+    background: #FF4E00;
+}
+
+#qcPriNav li.green a {
+    background: #2fa72b;
 }
 
 
