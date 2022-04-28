@@ -256,6 +256,7 @@ video#bgvid {
     width: 50%;
     list-style: none;
     overflow: hidden;
+    inline-size: 20%;
 }
 #qcPriNav li a, #qcPriNav li.current a:hover {
     display: block;
@@ -263,7 +264,6 @@ video#bgvid {
     font: 600 17px/100px "Open sans", Helvetica, sans-serif;
     letter-spacing: 1px;
     text-align: center;
-    text-transform: uppercase;
     transition: all .25s linear;
     -o-transition: all .25s linear;
     -moz-transition: all .25s linear;
@@ -272,7 +272,7 @@ video#bgvid {
 #qcPriNav li:first-child a {
     background: #27AAE1;
 }
-#qcPriNav li:last-child a {
+#qcPriNav li a {
     background: rgb(43, 187, 248);
 }
 #qcPriNav li a i, #qcPriNav li.current a:hover i {
@@ -297,7 +297,7 @@ video#bgvid {
 #qcPriNav li.current {
     overflow: visible;
 }
-#qcPriNav li.current:after {
+/* #qcPriNav li.current:after {
     content: "";
     position: absolute;
     left: 50%;
@@ -306,7 +306,7 @@ video#bgvid {
     border-left: 18px solid transparent;
     border-right: 18px solid transparent;
     border-top: 18px solid #1DB6AD;
-}
+} */
 #qcPriNav li.current:last-child:after {
     border-top: 18px solid #42D0C7;
 }

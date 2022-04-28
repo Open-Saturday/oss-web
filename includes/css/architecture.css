@@ -88,6 +88,8 @@ img::selection,img::-moz-selection {
 .col-4,
 .col-5,
 .col-6,
+.col-vr,
+.col-logo,
 .col-7,
 .col-8,
 .col-9,
@@ -115,6 +117,12 @@ img::selection,img::-moz-selection {
 }
 .col-6 {
 	width: 50%;
+}
+.col-vr {
+	width: 75%;
+}
+.col-logo {
+	width: 25%;
 }
 .col-7 {
 	width: 58.333333333333336%;
