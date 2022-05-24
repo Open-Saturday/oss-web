@@ -337,7 +337,7 @@ video#bgvid {
     width: 50%;
     list-style: none;
     overflow: hidden;
-    inline-size: 14.28%;
+    inline-size: 16.666%;
 }
 #qcPriNav li a, #qcPriNav li.current a:hover {
     display: block;
